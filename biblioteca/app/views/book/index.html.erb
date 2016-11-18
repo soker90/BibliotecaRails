@@ -1,0 +1,25 @@
+<h1>Libros</h1>
+
+<%= link_to 'Nuevo', book_new_path %>
+
+<table>
+  <thead>
+  <tr>
+    <th>Nombre</th>
+    <th>Autor</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @book.each do |book| %>
+      <tr>
+        <td><%= book.nombre %></td>
+        <td><%= link_to 'Ver Libro', :action => :show, :id => book.id %></td>
+        <td><%= link_to 'Editar', :action => :edit, :id => book.id %></td>
+        <td><%= link_to 'Eliminar', { :action => :destroy, :id => book.id }, :method => :delete, :data => { :confirm => '¿Estas seguro?' } %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Autores', author_index_path%>

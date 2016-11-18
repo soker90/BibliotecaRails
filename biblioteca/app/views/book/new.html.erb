@@ -1,0 +1,22 @@
+<h1>Nuevo Libro</h1>
+<%= form_for :book, :url => { :action => :create } do |f| %>
+    <p>
+      <%= f.label :nombre %><br>
+      <%= f.text_field :nombre %>
+    </p>
+
+    <p>
+      <%= f.label :author %><br>
+      <%= f.select(:author) do %>
+          <% @author.each do |a| %>
+              <%= content_tag(:option, a.nombre, value:a.id) %>
+          <%end%>
+      <%end%>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>
+
+<%= link_to 'Atrás', author_index_path %>
