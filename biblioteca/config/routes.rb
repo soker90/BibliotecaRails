@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "author/:id/edit" => "author#edit"
 
   put "author/:id" => "author#update"
+  delete "author/:id" => "author#destroy"
 
   resources :author
 

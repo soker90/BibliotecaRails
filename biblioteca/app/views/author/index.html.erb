@@ -14,9 +14,9 @@
   <% @author.each do |author| %>
       <tr>
         <td><%= author.nombre %></td>
-        <td><%= link_to 'Ver Autor', author %></td>
+        <td><%= link_to 'Ver Autor', :action => :show, :id => author.id %></td>
         <td><%= link_to 'Editar', :action => :edit, :id => author.id %></td>
-        <td><%= link_to 'Eliminar', author, method: :delete, data: { confirm: '¿Está seguro?' } %></td>
+        <td><%= link_to 'Eliminar', { :action => :destroy, :id => author.id }, :method => :delete, :data => { :confirm => '¿Estas seguro?' } %></td>
       </tr>
   <% end %>
   </tbody>
