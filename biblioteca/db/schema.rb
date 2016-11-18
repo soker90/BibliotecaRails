@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161114000715) do
+ActiveRecord::Schema.define(version: 20161118191643) do
 
-  create_table "autors", force: :cascade do |t|
+  create_table "authors", force: :cascade do |t|
     t.string   "nombre"
     t.string   "apellidos"
     t.datetime "created_at", null: false

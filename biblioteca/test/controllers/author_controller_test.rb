@@ -1,18 +1,18 @@
 require 'test_helper'
 
-class AutorControllerTest < ActionDispatch::IntegrationTest
+class AuthorControllerTest < ActionController::TestCase
   test "should get index" do
-    get autor_index_url
+    get :index
     assert_response :success
   end
 
   test "should get new" do
-    get autor_new_url
+    get :new
     assert_response :success
   end
 
   test "should get edit" do
-    get autor_edit_url
+    get :edit
     assert_response :success
   end
 
